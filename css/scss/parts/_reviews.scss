@@ -9,6 +9,14 @@
 	padding: 0 110px;
 	margin: 55px 0 0!important;
 
+	@media (max-width: 1200px) {
+		padding: 0 70px;
+	}
+
+	@media (max-width: 600px) {
+		padding: 0 30px;
+	}
+
 	.slide {
 		@extend %clearfix;
 	}
@@ -20,6 +28,12 @@
 		overflow-x: hidden;
 		margin-right: 15px;
 		float: left;
+
+		@media (max-width: 600px) {
+			display: block;
+			margin: 0 auto 20px;
+			float: none;
+		}
 	}
 
 	.text {
@@ -29,6 +43,17 @@
 		padding-right: 30px;
 		text-align: left;
 
+		@media (max-width: 900px) {
+			padding-right: 15px;
+		}
+
+		@media (max-width: 600px) {
+			width: 100%;
+			padding: 0 10px;
+			text-align: center;
+			float: none;
+		}
+
 		.title {
 			font-family: $rm;
 			font-size: 21px;
@@ -36,6 +61,10 @@
 
 		p {
 			font-size: 19px;
+
+			@media (max-width: 1200px) {
+				font-size: 16px;
+			}
 		}
 	}
 }
@@ -44,12 +73,20 @@
 	border-top: 2px solid $blue;
 	border-left: 2px solid $blue;
 	@include transform(rotate(-45deg));
+
+	@media (max-width: 600px) {
+		left: 0;
+	}
 }
 .slick-next {
 	right: 25px;
 	border-top: 2px solid $blue;
 	border-right: 2px solid $blue;
 	@include transform(rotate(45deg));
+
+	@media (max-width: 600px) {
+		right: 0;
+	}
 }
 .slick-arrow {
 	width: 28px;

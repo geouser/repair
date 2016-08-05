@@ -12,6 +12,14 @@
   		display: inline-block;
   		padding: 40px 80px 50px;
 
+      @media ($phones) {
+        width: 100%;
+      }
+
+      @media (max-width: 550px) {
+        padding: 40px 35px 50px;
+      }
+
   		.title {
   			font-size: 32px;
   			margin-bottom: 18px;
@@ -19,6 +27,12 @@
 
   		p {
   			font-size: 21px;
+
+        @media ($phones) {
+          br {
+            display: none;
+          }
+        }
 
   		}
 

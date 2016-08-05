@@ -13,7 +13,8 @@ $bsb: 'bsb';
 
 // RESPONSIVE
 // ---------------------------
-
+$tablets:						'max-width: 1000px';
+$phones:						'max-width: 750px';
 
 
 // TYPOGRAPHIC
@@ -30,11 +31,17 @@ span                            {	color: #333;}
 // lAYOUT
 // ---------------------------
 
-.wrapper                      	{   width: 1140px;
-								   	margin: 0 auto;
-                                   	text-align: center;
-                              	}
-header 							{}
-aside 							{}
-main 							{}
-footer 							{}
+.wrapper {
+	width: 1140px;
+	margin: 0 auto;
+    text-align: center;
+
+    @media (max-width: 1200px) {
+    	width: 100%;
+    	padding: 0 30px;
+    }
+
+    @media ($tablets) {
+    	padding: 0 20px;
+    }
+}

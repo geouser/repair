@@ -101,7 +101,16 @@ jQuery(document).ready(function($) {
     $('.reviews__slider').slick({
         dots: true,
         slidesToShow: 2,
-        arrows: true
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+        
     });
 
 }); // end file

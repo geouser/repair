@@ -12,9 +12,18 @@
 		background-repeat: no-repeat;
 		background-position: 50% 110px;
 
+		@media (max-width: 1200px) {
+			background-image: none;
+		}
+
 		&__row {
 			@include flex($wrap: wrap, $alignI: flex-start, $justify: center);
 			margin-bottom: 50px;
+
+			@media ($phones) {
+				display: inline;
+				margin-bottom: 0;
+			}
 
 			&:last-child {
 				margin-bottom: 0;
@@ -22,12 +31,32 @@
 
 			&.reverse {
 				@include flexDirection($direction: row-reverse);
+
+				@media (max-width: 1200px) {
+					@include flexDirection($direction: row);
+				}
 			}
 		}
 
 		.step {
 			width: 25%;
 			text-align: center;
+
+			@media ($phones) {
+				display: inline-block;
+				width: 33.33%;
+				vertical-align: top;
+				margin: 0 -2px;
+				margin-bottom: 50px;
+			}
+
+			@media (max-width: 580px) {
+				width: 50%;
+			}
+
+			@media (max-width: 430px) {
+				width: 70%;
+			}
 
 			.icon {
 				width: 100px;
@@ -60,7 +89,12 @@
 				p {
 					font-family: $rm;
 					color: #fff;
-					font-size: 17px;	
+					font-size: 17px;
+
+					@media ($tablets) {
+						font-size: 15px;
+						font-family: $rr;
+					}
 				}
 			}
 		}
@@ -72,10 +106,18 @@
 		border-radius: 5px;
 		padding: 26px 60px 29px;
 
+		@media ($phones) {
+			padding: 15px 20px;
+		}
+
 		p {
 			font-size: 28px;
 			font-family: $rm;
 			color: #fff;
+
+			@media ($phones) {
+				font-size: 19px;
+			}
 
 			span {
 				color: $blue;

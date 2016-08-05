@@ -3,6 +3,10 @@
 	color: #fff;
 	padding: 8px 0;
 
+	@media ($tablets) {
+		padding: 20px 0;
+	}
+
 	.wrapper {
 		@include flex($wrap: wrap, $alignI: center);
 	}
@@ -17,10 +21,22 @@
 
 	.col {
 		width: 33.33%;
+
+		@media ($tablets) {
+			width: 100%;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
 	}
 
 	&__phone {
 		@extend .contactUs;
+
+		@media ($tablets) {
+			text-align: center!important;
+		}
 
 		.order:hover {
 			border-bottom: 0;
@@ -29,6 +45,10 @@
 
 	&__logo {
 		text-align: left;
+
+		@media ($tablets) {
+			text-align: center;
+		}
 	}
 
 	&__studio {
