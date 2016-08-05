@@ -1,0 +1,63 @@
+.reviews {
+	background-image: url(../images/questionsBg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.reviews__slider {
+	padding: 0 110px;
+	margin: 55px 0 0!important;
+
+	.slide {
+		@extend %clearfix;
+	}
+
+	.preview {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		overflow-x: hidden;
+		margin-right: 15px;
+		float: left;
+	}
+
+	.text {
+		width: -webkit-calc(100% - 95px);
+		width: calc(100% - 95px);
+		float: right;
+		padding-right: 30px;
+		text-align: left;
+
+		.title {
+			font-family: $rm;
+			font-size: 21px;
+		}
+
+		p {
+			font-size: 19px;
+		}
+	}
+}
+.slick-prev {
+	left: 25px;
+	border-top: 2px solid $blue;
+	border-left: 2px solid $blue;
+	@include transform(rotate(-45deg));
+}
+.slick-next {
+	right: 25px;
+	border-top: 2px solid $blue;
+	border-right: 2px solid $blue;
+	@include transform(rotate(45deg));
+}
+.slick-arrow {
+	width: 28px;
+	height: 28px;
+	margin-top: -35px;
+
+	&:before,
+	&:after {
+		content: '';
+	}
+}

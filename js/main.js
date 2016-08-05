@@ -95,4 +95,13 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*---------------------------
+                                  Reviews slider popup
+    ---------------------------*/
+    $('.reviews__slider').slick({
+        dots: true,
+        slidesToShow: 2,
+        arrows: true
+    });
+
 }); // end file
