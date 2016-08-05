@@ -1,0 +1,85 @@
+.scheme {
+	background-image: url(../images/schemeBg.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+
+	&__box {
+		counter-reset: list;
+		padding: 60px 0 65px;
+		background-image: url(../images/line.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: 50% 110px;
+
+		&__row {
+			@include flex($wrap: wrap, $alignI: flex-start, $justify: center);
+			margin-bottom: 45px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&.reverse {
+				@include flexDirection($direction: row-reverse);
+			}
+		}
+
+		.step {
+			width: 25%;
+			text-align: center;
+
+			.icon {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				background-color: $blue;
+				display: inline-block;
+				margin-bottom: 17px;
+  				box-shadow: 0px 5px 5px 5px rgba( 0, 0, 0, .05);
+  				position: relative;
+
+  				&:before {
+  					content: "0"counter(list);
+  					counter-increment: list;
+  					font-family: Arial;
+  					font-weight: 900;
+  					opacity: 0.25;
+  					font-size: 30px;
+  					color: #fff;
+  					position: absolute;
+  					top: -30px;
+  					left: -16px;
+  				}
+
+			}
+
+			.text {
+				padding: 0 10px;
+				p {
+					font-family: $rm;
+					color: #fff;
+					font-size: 17px;	
+				}
+			}
+		}
+	}
+
+	.present {
+		display: inline-block;
+		border: 3px solid rgba(255, 255, 255, .3);
+		border-radius: 5px;
+		padding: 26px 60px 29px;
+
+		p {
+			font-size: 28px;
+			font-family: $rm;
+			color: #fff;
+
+			span {
+				color: $blue;
+			}
+		}
+	}
+
+}
