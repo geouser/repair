@@ -1,0 +1,70 @@
+.contacts {
+	height: 480px;
+	@extend %vertAlign;
+	text-align: center;
+	position: relative;
+
+	&__box {
+		display: inline-block;
+		vertical-align: middle;
+		background-color: #fff;
+  		box-shadow: 0px 5px 10px 10px rgba( 0, 0, 0, .1);
+  		padding: 20px 25px 25px;
+  		position: relative;
+  		z-index: 2;
+
+  		p {
+  			text-align: left;
+  		}
+
+  		.title {
+  			font-size: 21px;
+  			margin-bottom: 17px;
+  			text-align: center;
+  			font-family: $rm;
+  		}
+
+  		a {
+  			font-size: 17px;
+  			color: #333;
+  			position: relative;
+  			padding-left: 35px;
+
+  			&.tel:before {
+  				content: '';
+  				width: 11px;
+  				height: 19px;
+  				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAATCAYAAABGKffQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDMEIyQTdFQjVBRDkxMUU2QkM2RThEMjExMTdDREJDQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDMEIyQTdFQzVBRDkxMUU2QkM2RThEMjExMTdDREJDQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkMwQjJBN0U5NUFEOTExRTZCQzZFOEQyMTExN0NEQkNCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkMwQjJBN0VBNUFEOTExRTZCQzZFOEQyMTExN0NEQkNCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+EwStGgAAALJJREFUeNpiNDQ0jGdgYFjAgAAbgPg7ELMCcQiSeCYTmkIGqCIWKI0MpoMEVwNxLBD/gQqyATEjEP8H4l9QMWaQoSDFH86dO/cTyYTvDJjgr5GR0UeQM9iADEYGPAAqz8bEQAIYVTxIFX8Hpo3/+BRB5b+CEpIyMO61gPQPJANAKe83KAEhpURVkGJXIL6KZpgMED9Bt4FZUlLyKZA2h5r8DarxChArAjEXVOwzEFcCBBgApeMph4Gwun4AAAAASUVORK5CYII=);
+  				background-size: 100%;
+  				background-repeat: no-repeat;
+  				position: absolute;
+  				left: 4px;
+  				top: 50%;
+  				margin-top: -9.5px;
+  			}
+
+  			&.mail:before {
+  				content: '';
+  				width: 20px;
+  				height: 14px;
+  				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEM0E3OUM3QjVBRDkxMUU2QkU5MkY3MkE2OUM2MTczMCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEM0E3OUM3QzVBRDkxMUU2QkU5MkY3MkE2OUM2MTczMCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQzQTc5Qzc5NUFEOTExRTZCRTkyRjcyQTY5QzYxNzMwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQzQTc5QzdBNUFEOTExRTZCRTkyRjcyQTY5QzYxNzMwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Ufg5RgAAARhJREFUeNpiZGBgiAdiGyCeDsRyQMzIQDp4CMTJQHyFBUj4AfEjIH4AxOcYyAMCQPwFiJ1AHHMgBhm8FohNyTBMH4g3ATErEOswQJ3KAPXqIiAOJ8EwfyBeBsRMUH4EiPETyvkPxHFArAnE1UQYVgzEVkAcBcT/oGI/mbAobADix9BIwgX6gfgzEJdjk4zBoUkViE8BMRuSGCisjwKxFg49gUx4XPEXiO8BcT0QSwGxOBDXAfELIP6DSxMLDvEYaIxHQF2YDg3jNiD+AcQdQHwHiOcQ4+UcaDgSAhVAXIKWETC8rAFNT8QYCHLld2zhGYnEJifbIevxB7lQAUngPxkGIuuRBUXKbSB2BOKnZLoQZigoFbwGCDAA8dUvhCW0Ml4AAAAASUVORK5CYII=);
+  				background-size: 100%;
+  				background-repeat: no-repeat;
+  				position: absolute;
+  				left: 0;
+  				top: 50%;
+  				margin-top: -7px;
+  			}
+  		}
+	}
+
+	.map {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: #ccc;
+		z-index: 1;
+	}
+}

@@ -1,0 +1,39 @@
+.footer {
+	background-color: #333;
+	color: #fff;
+	padding: 8px 0;
+
+	.wrapper {
+		@include flex($wrap: wrap, $alignI: center);
+	}
+
+	p {
+		color: #fff;
+	}
+
+	a {
+		color: $blue;
+	}
+
+	.col {
+		width: 33.33%;
+	}
+
+	&__phone {
+		@extend .contactUs;
+
+		.order:hover {
+			border-bottom: 0;
+		}
+	}
+
+	&__logo {
+		text-align: left;
+	}
+
+	&__studio {
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+}
