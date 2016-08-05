@@ -37,7 +37,8 @@ h2 {
 }
 
 .aboutInfo__item__img,
-.tel:before {
+.tel:before,
+.tabs__item__info ul li:before {
     background-image: url("../images/icons_1.png")
 }
 .icon-ab-1 { background-position: -10px -0px; width: 70px; height: 68px; }
@@ -373,7 +374,10 @@ nav {
     border: none;
     box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.1);
     -webkit-border-radius: 4px; 
-        border-radius: 4px;     
+        border-radius: 4px;
+    &--wide {
+        min-width: 260px; 
+    }     
 }
 
 /*=====================================================================================*/
@@ -490,6 +494,123 @@ nav {
             border-left: 5px solid $blue;
             padding-left: 25px;  
             margin-bottom: 50px; 
+        }
+    }
+}
+
+
+/*=====================================================================================*/
+/*  Offices repair STYLES  */ 
+.tabsChange {
+    list-style-type: none;
+    li {
+        display: inline-block;
+        font: 21px $rm;
+        color: $blue;
+        cursor: pointer;
+        &.active {
+            color: #333; 
+        }  
+        &:after {
+            content: "/";
+            display: inline-block;
+            margin: 0 10px;  
+        }
+        &:last-of-type:after {
+            display: none;
+        }
+    }
+}
+.tabs {
+    margin-top: 40px; 
+    .tabs__item {
+        @extend %clearfix;
+        display: none;
+        &__slide {
+            @extend %clearfix;
+        }
+        &.active {
+            display: block;
+        }
+        &__img,
+        &__info {
+            float: left;
+            width: 50%; 
+        }
+        &__img {
+            border: 4px solid #fff; 
+            box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.15);
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+        &__info {
+            padding-left: 20px; 
+            text-align: left;
+            .title {
+                margin-bottom: 20px;
+                display: inline-block;
+                font: 28px $rm;  
+            }
+            ul {
+                margin: 0; 
+                list-style-type: none;
+                li {
+                    position: relative;
+                    padding-left: 31px;
+                    color: #333;
+                    font-size: 19px;
+                    margin-bottom: 10px;  
+                    span {
+                        font-family: $rm; 
+                    } 
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;  
+                        background-position: -48px -316px;
+                        position: absolute;
+                        top: 4px; left: 0; 
+                    } 
+                }
+            }
+        }
+        &__slide {
+            padding: 10px; 
+            ul {
+                li {
+                    &:before {
+                        background: none;
+                        width: 10px;
+                        height: 10px;
+                        background-color: $blue;
+                        -webkit-border-radius: 50%; 
+                           border-radius: 50%;    
+                    }
+                }
+            }
+        }
+    }
+}
+.slick-slider {
+    margin: 0 auto 50px; 
+}
+.slick-dots {
+    margin: 20px auto 0px; 
+    position: static;
+    li {
+        width: 20px;
+        height: 20px;
+        -webkit-border-radius: 50%; 
+        border-radius: 50%; 
+        border: 3px solid #5EC7F8;
+        &.slick-active {
+            border: 3px solid $blue;
+        }   
+        button {
+            display: none;
         }
     }
 }
