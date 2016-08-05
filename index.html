@@ -61,7 +61,7 @@
 
                 <div class="offerForm">
                     <p>Заполните форму ― узнайте, как мы поможем  сэкономить 10% на стоимости материалов</p>
-                    <button class="button"><span>Заполнить форму</span></button>
+                    <button href="#modal-popup" class="button magnific"><span>Заполнить форму</span></button>
                 </div>
             </div><!-- end offerInfo -->
         </section><!-- end offer section --> 
@@ -165,7 +165,7 @@
                             <button class="more">Подробнее</button>
                         </div>
                         <span>Экономичный вариант</span>
-                        <button class="button"><span>Оставить заявку</span></button>
+                        <button href="#modal-popup" class="button magnific"><span>Оставить заявку</span></button>
                     </div>
 
                     <div class="repairOptions__item">
@@ -174,7 +174,7 @@
                             <button class="more">Подробнее</button>
                         </div>
                         <span>Оптимальный вариант</span>
-                        <button class="button"><span>Оставить заявку</span></button>
+                        <button href="#modal-popup" class="button magnific"><span>Оставить заявку</span></button>
                     </div>
 
                     <div class="repairOptions__item">
@@ -183,7 +183,7 @@
                             <button class="more">Подробнее</button>
                         </div>
                         <span>Вариант “Люкс”</span>
-                        <button class="button"><span>Оставить заявку</span></button>
+                        <button href="#modal-popup" class="button magnific"><span>Оставить заявку</span></button>
                     </div>
                 </div><!-- end repairOptions -->
 
@@ -250,7 +250,7 @@
                         <input type="text" name="name" placeholder="Ваше имя">
                     </span>
                     <span class="inputWrap inputWrap--tel">
-                        <input type="text" name="tel" placeholder="Ваш телефон">
+                        <input type="text" name="phone" placeholder="Ваш телефон">
                     </span>
                     <button class="button button--wide"><span>Получить расчет</span></button>
                 </form>
@@ -336,7 +336,7 @@
                     </div><!-- end tab 2 -->
                 </div><!-- end office tabs -->
 
-                <button class="button button--wide"><span>Хочу также</span></button>
+                <button href="#modal-popup" class="button button--wide magnific"><span>Хочу также</span></button>
 
             </div><!-- end wrapper -->
         </section><!-- end Examples section -->
@@ -491,7 +491,7 @@
                 <div class="questions__box">
                     <h3 class="title">Остались вопросы?</h3>
                     <p>Свяжитесь с нами, и наш менеджер ответит <br>Вам в ближайшее время!</p>
-                    <button class="button"><span>Связаться</span></button>
+                    <button href="#modal-popup" class="button magnific"><span>Связаться</span></button>
                 </div>
             </div> <!-- end wrapper -->
         </section><!-- end questions section -->
@@ -524,12 +524,25 @@
                 </div>
                 <div class="col footer__phone">
                     <p><a href="tel:+7 (926) 898-84-70" class="tel">+7 (926) 898-84-70</a></p>
-                    <p><a href="#" class="order">Заказать звонок</a></p>
+                    <p><a href="#modal-popup" class="order magnific">Заказать звонок</a></p>
                 </div>
             </div>
         </footer>
 
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup"></div>
+
+
+        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup">
+            <p class="heading">Получите <span>бесплатны</span> предварительный расчет стоимости ремонта <span>прямо сейчас!</span></p>
+            <form action="">
+                <span class="inputWrap inputWrap--name">
+                    <input type="text" name="name" placeholder="Ваше имя">
+                </span>
+                <span class="inputWrap inputWrap--tel">
+                    <input type="text" name="phone" placeholder="Ваш телефон">
+                </span>
+                <button class="button button--wide"><span>Получить расчет</span></button>
+            </form>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maps.googleapis.com/maps/api/js"></script>
