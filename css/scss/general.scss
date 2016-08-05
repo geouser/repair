@@ -406,7 +406,11 @@ nav {
     }
     p {
         margin-top: 30px;
-        font-size: 32px;  
+        font-size: 32px; 
+
+        @media ($phones) {
+            font-size: 22px;
+        }
     }
 }
 
@@ -419,10 +423,18 @@ nav {
     background-size: cover;
 }
 .repairOptions {
-    @include flex($justify: space-around, $wrap: wrap);
+    @include flex($justify: space-around, $wrap: wrap, $alignI: flex-start);
     margin-top: 55px; 
     &__item {
         width: 280px;
+
+        @media ($tablets) {
+            margin: 0 10px 50px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
         &__img {
             height: 175px; 
             margin-bottom: 20px;
