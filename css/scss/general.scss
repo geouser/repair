@@ -487,6 +487,15 @@ nav {
     background-size: cover;
     .wrapper {
         width: 940px; 
+
+        @media (max-width: 1200px) {
+            width: 100%;
+            padding: 0 30px;
+        }
+
+        @media  ($phones) {
+            padding: 0 20px;
+        }
     }
     ul {
         margin-top: 45px; 
@@ -503,7 +512,11 @@ nav {
             font: 19px $rr;  
             border-left: 5px solid $blue;
             padding-left: 25px;  
-            margin-bottom: 50px; 
+            margin-bottom: 50px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -547,22 +560,47 @@ nav {
         &__info {
             float: left;
             width: 50%; 
+
+            @media (max-width: 800px) {
+                float: none;
+            }
         }
         &__img {
             border: 4px solid #fff; 
             box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.15);
+
+            @media (max-width: 800px) {
+                width: 350px;
+                display: block;
+                margin: 0 auto 30px;
+            }
+
+            @media (max-width: 420px) {
+                width: 100%;
+            }
+
             img {
                 width: 100%;
                 display: block;
             }
         }
+
         &__info {
             padding-left: 20px; 
             text-align: left;
+
+            @media (max-width: 800px) {
+                padding-left: 0;
+                width: 100%;
+            }
             .title {
                 margin-bottom: 20px;
                 display: inline-block;
                 font: 28px $rm;  
+
+                @media (max-width: 800px) {
+                    font-size: 24px;
+                }
             }
             ul {
                 margin: 0; 
@@ -573,6 +611,10 @@ nav {
                     color: #333;
                     font-size: 19px;
                     margin-bottom: 10px;  
+
+                    @media (max-width: 800px) {
+                        font-size: 16px;
+                    }
                     span {
                         font-family: $rm; 
                     } 
@@ -636,16 +678,31 @@ nav {
     form {
         margin-top: 60px; 
         width: 840px; 
+
+        @media ($tablets) {
+            width: 100%;
+        }
     }
 }
 
 form {
     @include flex();
     margin: 0 auto; 
+
+    @media (max-width: 840px) {
+        display: block;
+    }
+
     .inputWrap {
         display: inline-block;
         background-repeat: no-repeat;
         position: relative;
+
+        @media (max-width: 840px) {
+            display: block;
+            margin: 0 auto 20px;
+            width: 260px;
+        }
         &:before {
             width: 17px;
             height: 19px;
