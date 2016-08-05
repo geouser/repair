@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
             $element2 = $('header'),
             className = 'hasScrolled';
 
-        $document.scroll(function() {
+        $document.on('scroll ready', function() {
             $element.toggleClass(className, $document.scrollTop() >= 1);
             $element2.toggleClass(className, $document.scrollTop() >= 1);
         });
@@ -93,6 +93,26 @@ jQuery(document).ready(function($) {
         removalDelay: 300,
         mainClass: 'my-mfp-slide-bottom'
     });
+
+    
+    function openPopup(popup) {
+        $.magnificPopup.open({
+            items: {
+                src: popup
+            },
+            type: 'inline',
+            fixedContentPos: false,
+            fixedBgPos: true,
+            overflowY: 'auto',
+            modal: false,
+            closeBtnInside: true,
+            preloader: false,
+        
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        }, 0);
+    }
 
 
     $('.tabs__item--slider').slick({
